@@ -1,0 +1,8 @@
+.env
+.env.*
+node_modules/
+*.log
+*.pdf
+create-index.js
+.DS_Store
+Thumbs.db
