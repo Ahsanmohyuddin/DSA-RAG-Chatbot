@@ -161,7 +161,7 @@ This project took a lot of debugging because several services changed in 2026. T
 - Show the source chunk text next to each answer.
 - Add reranking or hybrid (keyword + vector) search.
 - Build a small web UI instead of the terminal.
-
+- Also will add cache hit 
 ## References
 
 - [langchain-pinecone issue #158: document-schema indexes](https://github.com/langchain-ai/langchain-pinecone/issues/158)
