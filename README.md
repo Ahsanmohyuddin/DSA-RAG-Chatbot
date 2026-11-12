@@ -148,20 +148,19 @@ This project took a lot of debugging because several services changed in 2026. T
 - The Gemini answer code was placed after an endless `while (true)` loop, so it never ran, and it used variables (`question`, `context`) that did not exist there.
 - **Fix:** Everything for one question (rewrite, embed, search, answer) now lives inside a single `chatting()` function, and the chat history lives outside it.
 
-## Limitations
+## Current Limitations
 
-- Answers come only from the PDF you indexed.
-- Scanned PDFs without a text layer will not work (they need OCR first).
-- If you change the embedding model, recreate the index with the new dimension and run `index.js` again.
-- The LLM and embedding model names will change again over time. Check the Gemini models page when something stops working.
+- Answer quality depends on the retrieved documents.
+- Incomplete documents can affect response accuracy.
+- Retrieval performance depends on document chunking.
 
-## Ideas for next steps
+## Future Improvements
 
-- Stream the answer word by word.
-- Show the source chunk text next to each answer.
-- Add reranking or hybrid (keyword + vector) search.
-- Build a small web UI instead of the terminal.
-- Also will add cache hit 
+- Improve document preprocessing.
+- Add retrieval evaluation metrics.
+- Implement conversation history.
+- Improve source relevance scoring.
+
 ## References
 
 - [langchain-pinecone issue #158: document-schema indexes](https://github.com/langchain-ai/langchain-pinecone/issues/158)
